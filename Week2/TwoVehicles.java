@@ -5,29 +5,52 @@ class Vehicle
     int passengers;
     int fuelcap;
     int mpg;
+
+    int range()
+    {
+        return fuelcap * mpg;
+    }
+
+    double fuelNeeded(int miles)
+    {
+        return (double) miles / mpg;
+    }
+}
+
+class Minivan extends Vehicle
+{
+    Minivan()
+    {
+        passengers = 7;
+        fuelcap = 16;
+        mpg = 21;
+    }
+}
+
+class Sportscar extends Vehicle
+{
+    Sportscar()
+    {
+        passengers = 2;
+        fuelcap = 14;
+        mpg = 12;
+    }
 }
 
 public class TwoVehicles
 {
     public static void main(String[] args)
     {
-        Vehicle minivan = new Vehicle();
-        Vehicle sportscar = new Vehicle();
+        Minivan minivan = new Minivan();
+        Sportscar sportscar = new Sportscar();
 
-        int range1, range2;
+        double gallons;
+        int dist = 252;
 
-        minivan.passengers = 7;
-        minivan.fuelcap = 16;
-        minivan.mpg = 21;
+        gallons = minivan.fuelNeeded(dist);
+        System.out.println("To go " + dist + " miles minivan needs " + gallons + " gallons of fuel.");
 
-        sportscar.passengers = 2;
-        sportscar.fuelcap = 14;
-        sportscar.mpg = 12;
-
-        range1 = minivan.fuelcap * minivan.mpg;
-        range2 = sportscar.fuelcap * sportscar.mpg;
-
-        System.out.println("Minivan can carry " + minivan.passengers + " with range of " + range1);
-        System.out.print("Sportcar can carry " + sportscar.passengers + " with a range of " + range2);
+        gallons = sportscar.fuelNeeded(dist);
+        System.out.println("To go " + dist + " miles sportscar needs " + gallons + " gallons of fuel.");
     }
 }
