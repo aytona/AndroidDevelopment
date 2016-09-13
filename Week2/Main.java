@@ -25,5 +25,9 @@ public class Main
         System.out.println("Walid has an average of: " + walid.getAverageScore());
         walid.addQuiz(70);
         System.out.println("Walid has an average of: " + walid.getAverageScore() + " Total score of: " + walid.getTotalScore());
+
+        Circle circle = new Circle(0, 0, 15);
+        circle.displayPosition();
+        System.out.println("Circle has an area of: " + circle.getArea());
     }
 }
