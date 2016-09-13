@@ -7,7 +7,7 @@ public class Employee
 {
     String name;
     double hourlyPay;
-    double yearOfHire;
+    int yearOfHire;
     double hoursPerWeek;
 
     double getYearlySalary()
@@ -15,14 +15,14 @@ public class Employee
         return hourlyPay * hoursPerWeek * 52;
     }
 
-    double getYearsOfEmployment(double currentYear)
+    double getYearsOfEmployment(int currentYear)
     {
         return currentYear - yearOfHire;
     }
 
     Employee() { }
 
-    Employee(String name, double pay, double year, double week)
+    Employee(String name, double pay, int year, double week)
     {
         this.name = name;
         hourlyPay = pay;

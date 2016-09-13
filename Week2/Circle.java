@@ -1,7 +1,5 @@
 package com.aytona;
 
-import static java.lang.Math.*;
-
 /**
  * Created by Aytona on 2016-09-13.
  */

@@ -1,9 +1,11 @@
 package com.aytona;
+import java.util.Scanner;
 
 public class Main
 {
     public static void main(String[] args)
     {
+        Scanner scan = new Scanner(System.in);
         Employee wahid = new Employee("Wahid", 12, 2014, 30);
         Employee derek = new Employee("Derek", 13, 2013, 35);
         Employee carlo = new Employee("Carlo", 11, 2015, 20);
@@ -29,5 +31,9 @@ public class Main
         Circle circle = new Circle(0, 0, 15);
         circle.displayPosition();
         System.out.println("Circle has an area of: " + circle.getArea());
+
+        System.out.println("Phone Number: ");
+        PhoneNum myNum = new PhoneNum(scan.nextLine());
+        System.out.println("Formatted: " + myNum.showNum());
     }
 }
