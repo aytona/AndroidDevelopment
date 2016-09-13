@@ -35,5 +35,16 @@ public class Main
         System.out.println("Phone Number: ");
         PhoneNum myNum = new PhoneNum(scan.nextLine());
         System.out.println("Formatted: " + myNum.showNum());
+
+        Stack myStack = new Stack(5);
+        myStack.push('H');
+        myStack.push('e');
+        myStack.push('l');
+        myStack.push('l');
+        myStack.push('o');
+        myStack.pop();
+        myStack.push('!');
+
+        System.out.println(myStack.showStack());
     }
 }
