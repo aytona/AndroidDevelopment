@@ -18,5 +18,12 @@ public class Main
         bugsy.turn();
         bugsy.move();
         System.out.println("Bugsy's current position: " + bugsy.getPosition());
+
+        Student walid = new Student("Walid");
+        walid.totalQuizScore = 180;
+        walid.quizzesTaken = 2;
+        System.out.println("Walid has an average of: " + walid.getAverageScore());
+        walid.addQuiz(70);
+        System.out.println("Walid has an average of: " + walid.getAverageScore() + " Total score of: " + walid.getTotalScore());
     }
 }
