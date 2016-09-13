@@ -11,5 +11,12 @@ public class Main
         System.out.println(carlo.name + " Earns " + carlo.hourlyPay + " Works " + carlo.hoursPerWeek);
         System.out.println("Wahid has been working here for " + wahid.getYearsOfEmployment(2016) + " years");
         System.out.println("Derek gets paid " + derek.getYearlySalary() + " yearly");
+
+        Bug bugsy = new Bug(10);
+        bugsy.move();
+        System.out.println("Bugsy's current position: " + bugsy.getPosition());
+        bugsy.turn();
+        bugsy.move();
+        System.out.println("Bugsy's current position: " + bugsy.getPosition());
     }
 }
